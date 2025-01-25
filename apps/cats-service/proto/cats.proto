@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package cats;
+
+service CatsService {
+    rpc GetCats ({ page: string }) returns ({ catsCount: string });
+}
+
+message GetCatsRequest {
+    string page = 1;
+}
+
+message GetCatsResponse {
+    string catsCount = 1;
+}
