@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+package dogs;
+
+service DogsService {
+    rpc GetDataStream (StreamRequest) returns (stream StreamResponse);
+}
+
+message StreamRequest {
+  string query = 1;
+}
+
+message StreamResponse {
+  string result = 1;
+}

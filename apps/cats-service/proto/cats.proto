@@ -3,7 +3,7 @@ syntax = "proto3";
 package cats;
 
 service CatsService {
-    rpc GetCats ({ page: string }) returns ({ catsCount: string });
+    rpc getCatsCount (GetCatsRequest) returns (GetCatsResponse);
 }
 
 message GetCatsRequest {
